@@ -1,4 +1,3 @@
-import Spinner from "../Spinner";
 import { ShowError } from "../errors";
 import useFileGetRequestWithoutAuth from "../../Hooks/useFileGetRequestWithoutAuth";
 
@@ -19,7 +18,6 @@ function ShowFile({ fileId, additionalData }) {
 
   return (
     <div>
-      <Spinner loading={loading} />
       <ShowError error={error} />
       {data !== null ? (
         <ShowFileData

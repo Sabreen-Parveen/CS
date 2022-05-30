@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import SignupForm from "../components/Forms/SignupForm";
 import { ShowError } from "../components/UI/errors";
 import useSignup from "../lib/Hooks/useSignup";
-import Spinner from "../components/UI/Spinner";
 
 export default function Signup() {
   const router = useRouter();
@@ -23,7 +22,6 @@ export default function Signup() {
           <h2 className={`form-title ${loading ? "opacity-25" : ""}`}>
             Signup
           </h2>
-          <Spinner loading={loading} message="Signing up" />
           <div className={` ${loading ? "opacity-25" : ""}`}>
             <ShowError error={error} />
             <SignupForm submitHandler={SignupUser} />

@@ -7,7 +7,6 @@ import signIn from "../lib/Auth/Signin";
 import LoginForm from "../components/Forms/LoginForm";
 import { ErrorParagraph } from "../components/UI/errors";
 import useAuthContext from "../components/contexts/useAuthContext";
-import Spinner from "../components/UI/Spinner";
 
 export default function Login() {
   const ctx = useAuthContext();
@@ -58,7 +57,6 @@ export default function Login() {
           <h2 className={` form-title ${loading ? "opacity-25" : ""}`}>
             Login
           </h2>
-          <Spinner loading={loading} message="Logging In" />
           <div className={`${loading ? "opacity-25" : ""}`}>
             <ErrorParagraph>{error}</ErrorParagraph>
             <div className="mx-auto w-max">
