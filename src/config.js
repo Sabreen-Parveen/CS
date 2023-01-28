@@ -8,7 +8,7 @@ const config = {
     endpoints: [
       {
         name: "CoderSpaceApi",
-        endpoint: "http://3.110.42.139:8000/api",
+        endpoint: "http://localhost:8000/api",
       },
     ],
   },
